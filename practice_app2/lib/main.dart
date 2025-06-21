@@ -35,26 +35,37 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title), // 👈 Use the passed title
+        title: Text(widget.title), // 👈 Uses the title from MyHomePage
       ),
-      body: Center(
-        child: Container(
-          width: 200,
-          height: 100,
-          color: Colors.blueGrey,
-          alignment: Alignment.center,
-          child: Center(
-          child:Text(
-            "Hello Flutter Devs",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              // backgroundColor: Colors.deepOrangeAccent,
-            ),
-          ),
-          ),
-        ),
+      body:Container(
+        width:200,
+        height:300,
+      child: Column(
+        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment:CrossAxisAlignment.end,
+        children:[
+          Text('A',style: TextStyle(fontSize: 25),),
+          Text('B',style: TextStyle(fontSize: 25),),
+          Text('C',style: TextStyle(fontSize: 25),),
+          Text('D',style: TextStyle(fontSize: 25),),
+          Text('E',style: TextStyle(fontSize: 25),),
+          Text('F',style: TextStyle(fontSize: 25),),
+        ],
+      ),
+        // child: Row(
+        //   mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+        //   crossAxisAlignment:CrossAxisAlignment.center,
+        //   children:[
+        //     Text('A',style: TextStyle(fontSize: 25),),
+        //     Text('B',style: TextStyle(fontSize: 25),),
+        //     Text('C',style: TextStyle(fontSize: 25),),
+        //     Text('D',style: TextStyle(fontSize: 25),),
+        //     Text('E',style: TextStyle(fontSize: 25),),
+        //     Text('F',style: TextStyle(fontSize: 25),),
+        //   ],
+        // ),
       ),
     );
   }
 }
+
