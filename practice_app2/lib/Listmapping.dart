@@ -30,25 +30,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
+  var arrData=['Manas','Sohom','Rahul','Anish','Mohit','Rohit','Sagnik'];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Constrained Box'),
-      ),
-      body:ConstrainedBox(
-        constraints: BoxConstraints(
-          maxWidth: 200,
-          maxHeight: 100,
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text('Mapping Lists to widgets'),
         ),
-        child: Text('Hello World Hello World Hello World Hello World Hello World Hello World', style: TextStyle(
-          fontSize: 21,
-          overflow: TextOverflow.fade
-        ),),
-      )
+        body:Container(
+          child: ListView(
+              children: arrData.map((value){
+                return Container(
+                  child: Text(value),
+                );
+              }).toList()
+          ),
+        )
     );
   }
 }
