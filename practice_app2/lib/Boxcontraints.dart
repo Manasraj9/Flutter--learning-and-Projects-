@@ -39,7 +39,16 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text('Constrained Box'),
         ),
-        body:Text('Hello world')
+        body:ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 200,
+            maxHeight: 100,
+          ),
+          child: Text('Hello World Hello World Hello World Hello World Hello World Hello World', style: TextStyle(
+              fontSize: 21,
+              overflow: TextOverflow.fade
+          ),),
+        )
     );
   }
 }
